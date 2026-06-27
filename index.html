@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <div id="logo">
+        <img src="assets\logo.png" alt="Logo" />
+      </div>
+      <div class="title">
+        <h1>Quiz Master</h1>
+      </div>
+      <div class="toggle">
+        <button class="toggle" id="theme-btn">☀️/🌙</button>
+      </div>
+    </nav>
+    <section class="start" id="start-screen">
+      <div class="intro">
+        <h1>Welcome to QuizMaster</h1>
+        <p>
+          Challenge yourself with timed quizzes. Choose your settings and begin!
+        </p>
+      </div>
+      <!-- main form -->
+      <form class="form">
+        <div class="formgrp">
+          <label for="name">Your Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="enter your name"
+          />
+        </div>
+        <div class="formgrp">
+          <label for="Category">Category</label>
+          <select name="category" id="category">
+            <option value="">Any Category</option>
+            <option value="9">General Knowledge</option>
+            <option value="18">Computer Science</option>
+            <option value="19">Mathematics</option>
+            <option value="17">Science & Nature</option>
+            <option value="21">Sports</option>
+            <option value="23">History</option>
+            <option value="22">Geography</option>
+          </select>
+        </div>
+
+        <div class="formgrp">
+          <label for="Difficulty">Difficulty</label>
+          <select name="Difficulty" id="Difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Difficult</option>
+          </select>
+        </div>
+        <div class="formgrp">
+          <label for="Questions">No of Questions</label>
+          <select name="number" id="Questions">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+          </select>
+        </div>
+        <button type="submit" id="start-btn">Start Quiz</button>
+      </form>
+    </section>
+    <section id="quizlive" class="hidden">
+      <div class="quiz-card">
+        <div class="quiz-header">
+          <p id="question-number">Question 1 / 10</p>
+
+          <p id="score">Score : 0</p>
+
+          <p id="timer">20s</p>
+        </div>
+
+        <div class="progress-container">
+          <div class="progress-bar"></div>
+        </div>
+
+        <h2 id="question-text">Question will appear here...</h2>
+
+        <div id="options">
+          <!-- JS will generate options here -->
+        </div>
+
+        <button id="next-btn">Next Question</button>
+      </div>
+    </section>
+    <section id="result" class="hidden">
+      <div class="result-card">
+        <h1>🎉 Quiz Completed!</h1>
+
+        <h2 id="performance-message">Excellent!</h2>
+
+        <div class="result-grid">
+          <div class="result-item">
+            <h3>Final Score</h3>
+
+            <p id="final-score">0</p>
+          </div>
+
+          <div class="result-item">
+            <h3>Correct</h3>
+
+            <p id="correct-count">0</p>
+          </div>
+
+          <div class="result-item">
+            <h3>Incorrect</h3>
+
+            <p id="incorrect-count">0</p>
+          </div>
+
+          <div class="result-item">
+            <h3>Percentage</h3>
+
+            <p id="percentage">0%</p>
+          </div>
+        </div>
+
+        <button id="restart-btn">Play Again</button>
+      </div>
+    </section>
+    <script src="script2.js"></script>
+  </body>
+</html>
